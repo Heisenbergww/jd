@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>demo</title>
+    <link rel="stylesheet" href="../src/modules/layui/css/layui.css">
+    <link rel="stylesheet" href="../src/modules/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../src/css/normal.css">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/demo.css">
+    <!-- 通用 -->
+    <script src="../src/modules/jquery/jquery-3.3.1.min.js"></script>
+    <!-- 图表 -->
+    <script src="../src/js/chart.js"></script>
+    <!-- layui -->
+    <script src="../src/modules/layui/layui.js"></script>
+    <!-- Swiper JS -->
+    <script src="../src/modules/swiper/js/swiper.min.js"></script>
+
+</head>
+<body>
+    <!-- header -->
+    <div id="header">
+        <div class="head-bar">
+            <h2>营区视频安防与智能识别调度中心</h2>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div id="content">
+        <div class="layui-tab layui-tab-brief" lay-filter="docDemoTabBrief">
+            <ul class="layui-tab-title">
+                <li class="layui-this">网站设置</li>
+                <li>用户管理</li>
+                <li>权限分配</li>
+                <li>商品管理</li>
+                <li>订单管理</li>
+            </ul>
+            <div class="layui-tab-content" style="height: 100px;">
+                <div class="layui-tab-item layui-show">内容不一样是要有，因为你可以监听tab事件（阅读下文档就是了）</div>
+                <div class="layui-tab-item">内容2</div>
+                <div class="layui-tab-item">内容3</div>
+                <div class="layui-tab-item">内容4</div>
+                <div class="layui-tab-item">内容5</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- chart -->
+    <div id="pie-chart-wrapper">
+        <canvas id="pie-chart"></canvas>
+    </div>
+
+    <div id="line-chart-wrapper">
+        <canvas id="line-chart"></canvas>
+    </div>
+
+    <div id="ppt">
+        <div class="swiper-container">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">Slide 1</div>
+                <div class="swiper-slide">Slide 2</div>
+                <div class="swiper-slide">Slide 3</div>
+                <div class="swiper-slide">Slide 4</div>
+                <div class="swiper-slide">Slide 5</div>
+                <div class="swiper-slide">Slide 6</div>
+                <div class="swiper-slide">Slide 7</div>
+                <div class="swiper-slide">Slide 8</div>
+                <div class="swiper-slide">Slide 9</div>
+                <div class="swiper-slide">Slide 10</div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Arrows -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+
+    </div>
+    
+    <script src="../src/js/DATA.json"></script>
+    <script src="../src/js/main.js"></script>    
+    <script src="../src/js/demo.js"></script>
+    
+</body>
+</html>
