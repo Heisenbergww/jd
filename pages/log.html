@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>图库日志</title>
+    <link rel="stylesheet" href="../src/modules/layui/css/layui.css">
+    <link rel="stylesheet" href="../src/modules/swiper/css/swiper.min.css">
+    <link rel="stylesheet" href="../src/modules/treemenu/jquery.treemenu.css">
+    <link rel="stylesheet" href="../src/css/normal.css">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/demo.css">
+    <link rel="stylesheet" href="../src/css/log.css">
+
+    <!-- 通用 -->
+    <script src="../src/modules/jquery/jquery-3.3.1.min.js"></script>
+    <!-- tree menu -->
+    <script src="../src/modules/treemenu/jquery.treemenu.js"></script>
+    <!-- layui -->
+    <script src="../src/modules/layui/layui.js"></script>
+    <!-- Swiper JS -->
+    <script src="../src/modules/swiper/js/swiper.js"></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header">
+        <div class="head-bar layui-nav">
+            <h2>营区视频安防与智能识别调度中心</h2>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div id="content">
+        <div class="nav-bar-left  fl">
+            <ul class="layui-nav layui-nav-tree layui-inline">
+                <li class="layui-nav-item layui-nav-itemed nav-bar-line"><a href="">基础功能区</a></li>
+                <li class="layui-nav-item"><a href="">维护</a></li>
+                <li class="layui-nav-item"><a href="">实况</a></li>
+                <li class="layui-nav-item nav-bar-line"><a href="">关注对象区</a></li>
+                <li class="layui-nav-item global-selected"><a href="">人员</a></li>
+                <li class="layui-nav-item"><a href="">车辆</a></li>
+                <li class="layui-nav-item"><a href="">物品</a></li>
+                <li class="layui-nav-item"><a href="">关键区域</a></li>
+                <li class="layui-nav-item nav-bar-line"><a href="">管理员</a></li>
+                <li class="layui-nav-item"><a href="">N库管理</a></li>
+                <li class="layui-nav-item"><a href="">陌生人库管理</a></li>
+                <li class="layui-nav-item"><a href="">营区管理</a></li>
+                <li class="layui-nav-item"><a href="">营区设备管理</a></li>
+                <li class="layui-nav-item"><a href="">图库日志</a></li>
+            </ul>
+        </div>
+
+        <div class="content-body-right fl">
+            <!-- content head bar -->
+            <div class="content-head">
+                <div class="content-menu">
+                    <ul class="layui-nav layui-bg-white">
+                        <li class="layui-nav-item"><h2 class="admin-table-title">图库日志</h2></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- content main -->
+            <div class="content-main clearfix">   
+                <!-- 个性部分 -->
+                <div class="content-show-part fl clearfix">
+                    <!-- 表格 -->
+                    <table id="log-chart" lay-filter="log-chart"></table>
+                    <div id="log-chart-page"></div>                    
+                </div>
+            </div>
+        </div>
+        
+
+
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+
+    </div>
+
+    <script src="../src/js/DATA.js"></script>
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/log.js"></script>
+
+</body>
+
+</html>

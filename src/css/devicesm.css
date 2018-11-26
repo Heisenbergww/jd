@@ -1,0 +1,17 @@
+.admin-table-title{
+    color:#000!important;
+}
+/* override */
+.layui-table-cell{
+    height: inherit;
+    text-align: center;
+}
+.layui-table img {
+    max-width: 140px;
+}
+.content-show-part{
+    padding-left: 100px;
+}
+.flow-link{
+    text-decoration: underline;
+}
