@@ -27,6 +27,7 @@ $(document).ready(function(){
                 // height: 512,                
                 cols: [[
                     { field: 'devicecode', title: '设备编号', edit:true},
+                    { field: 'areacode', title: '所属区域'},
                     { field: 'campcode', title: '所属营区'},
                     { field: 'basecode', title: '所属基地'},
                     { field: 'zonecode', title: '所属战区'},
@@ -55,6 +56,12 @@ $(document).ready(function(){
                         '<label class="layui-form-label">设备编号</label>'+
                         '<div class="layui-input-block">'+
                             '<input type="text" name="devicecode" lay-verify="number" autocomplete="off" placeholder="请输入设备编号" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">'+
+                        '<label class="layui-form-label">所属区域</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="area" lay-verify="text" autocomplete="off" placeholder="请输入所属区域" class="layui-input">'+
                         '</div>'+
                     '</div>'+
                    '<div class="layui-form-item">'+

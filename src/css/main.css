@@ -1,3 +1,23 @@
 .fr{
     float: right;
 }
+
+
+/* override */
+.nav-bar-left ul{
+    margin-left: 0px;
+}
+#ar-list{
+    min-height: 630px;
+    height: 100%;
+    padding: 10px 10px 10px 0;
+    background:#393d49;
+}
+#ar-list li{
+    /* border: 1px solid; */
+    cursor: pointer;
+    font-size: 14px;
+    padding: 3px 25px;
+    color:#46CFB0;
+    border-radius: 3px;
+}

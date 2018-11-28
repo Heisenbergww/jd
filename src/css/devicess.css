@@ -1,0 +1,15 @@
+
+#pie-chart-wrapper{
+    text-align: center;
+}
+#pie-chart-wrapper h2{
+    font-size: 16px;
+    text-align: center;
+    text-indent: 15px;
+    color:#a2a2a2;
+}
+#pie-chart-wrapper{
+    position: absolute;
+    left:270px;
+    /* top:0; */
+}

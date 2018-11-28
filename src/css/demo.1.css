@@ -95,8 +95,8 @@ body{
 .content-main{
     /* box-shadow: -2px 0 0 #eee,0 -2px 0 #eee ,0 2px 0 #eee ,0 0 0 ; */
 }
-.content-nav-bottom{
-    /* min-height: 900px; */
+.content-nav-bottom h2{
+
 }
 .area-list{
     text-align: center;   
@@ -115,16 +115,15 @@ body{
     color: #fff!important;
 }
 /* chart */
-#net-chart-wrapper{
+#pie-chart-wrapper{
     text-align: center;
 }
-#net-chart-wrapper h2{
+#pie-chart-wrapper h2{
     font-size: 16px;
     text-align: center;
     text-indent: 15px;
     color:#a2a2a2;
 }
-
 #line-chart-wrapper h2{
     font-size: 16px;
     text-align: center;
@@ -177,7 +176,7 @@ body{
 .show-top{
     height: 265px;
 }
-#net-chart-wrapper{
+#pie-chart-wrapper{
     position: absolute;
     left:0;
 }
@@ -223,5 +222,50 @@ body{
 }
 
 /*tree meunu*/
+.content-nav-top {
+    background-color: #2C3E50;
+    min-height: 639px;
+}
+.content-nav-bottom{
+    background-color: #2C3E50;
+    min-height: 639px;
+    padding: 10px 0;
+}
+.tree {
+    color: #46CFB0;
+    /* width: 800px; */
+    padding-top: 10px;
+    margin: 0 auto;
+}
+.tree li,
+.tree li > a,
+.tree li > span {
+    padding: 3px 13px;
+    border-radius: 4px;
+}
 
+.tree li a {
+   color:#46CFB0;
+   text-decoration: none;
+   line-height: 24px;
+   border-radius: 4px;
+}
+
+.tree li a:hover {
+    background-color: #34BC9D;
+    color: #fff;
+}
+
+.active {
+    background-color: #34495E;
+    color: white;
+}
+
+.active a {
+    color: #fff;
+}
+
+.tree li a.active:hover {
+    background-color: #34BC9D;
+}
 
