@@ -16,6 +16,7 @@ $(document).ready(function(){
             var datalist = DEVICES;
             beginView(datalist) 
             pagerRander()
+            panel()
         }   
         
         function beginView(datalist){
@@ -44,7 +45,63 @@ $(document).ready(function(){
                 groups:4,
                 layout:['prev', 'page', 'next','skip'],                
             });     
-        }     
+        }  
+        
+        function panel() {
+            var panelHTML = 
+            '<div class="panel-wrapper" id="hide-panel">'+
+                '<form class="layui-form">'+
+                    '<div class="layui-form-item">'+
+                        '<label class="layui-form-label">设备编号</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="devicecode" lay-verify="number" autocomplete="off" placeholder="请输入设备编号" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                   '<div class="layui-form-item">'+
+                        '<label class="layui-form-label">所属营区</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="camp" lay-verify="text" autocomplete="off" placeholder="请输入所属营区" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">'+
+                       '<label class="layui-form-label">所属基地</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="base" lay-verify="text" autocomplete="off" placeholder="请输入所属基地" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">'+
+                        '<label class="layui-form-label">所属战区</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="zone" lay-verify="text" autocomplete="off" placeholder="请输入所属战区" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">'+
+                        '<label class="layui-form-label">设备链接</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="url" lay-verify="url" autocomplete="off" placeholder="请输入设备链接" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">'+
+                        '<div class="layui-input-block">'+
+                            '<div class="layui-btn" lay-submit="" lay-filter="" id="panel-submit">提交</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</form>'+
+            '</div>';
+            $('#add-btn').on('click', function () {
+                layer.open({
+                    type: 1,
+                    title: false,
+                    closeBtn: 1,
+                    shadeClose: true,
+                    skin: 'yourclass',
+                    content: panelHTML
+                });
+                $('#panel-submit').on('click',function(){
+                    
+                })
+            })
+        }
              
          
         

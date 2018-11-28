@@ -16,6 +16,7 @@ $(document).ready(function(){
             var datalist = CAMPS;
             beginView(datalist) 
             pagerRander()
+            panel()
         }   
         
         function beginView(datalist){
@@ -25,7 +26,7 @@ $(document).ready(function(){
                 cellMinWidth:180,
                 // height: 512,                
                 cols: [[
-                    { field: 'campcode', title: '营区'},
+                    { field: 'campcode', title: '营区', edit:true },
                     { field: 'basecode', title: '基地', edit:true },
                     { field: 'zonecode', title: '战区', edit:true },
                     { fixed: 'right', title: '操作', toolbar: '#barDemo' }
@@ -42,7 +43,51 @@ $(document).ready(function(){
                 groups:4,
                 layout:['prev', 'page', 'next','skip'],                
             });     
-        }     
+        }
+        
+        function panel() {
+            var panelHTML = 
+            '<div class="panel-wrapper" id="hide-panel">'+
+                '<form class="layui-form">'+
+                   '<div class="layui-form-item">'+
+                        '<label class="layui-form-label">营区</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="camp" lay-verify="text" autocomplete="off" placeholder="请输入营区" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">'+
+                       '<label class="layui-form-label">基地</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="base" lay-verify="text" autocomplete="off" placeholder="请输入基地" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">'+
+                        '<label class="layui-form-label">战区</label>'+
+                        '<div class="layui-input-block">'+
+                            '<input type="text" name="zone" lay-verify="text" autocomplete="off" placeholder="请输入战区" class="layui-input">'+
+                        '</div>'+
+                    '</div>'+
+                    '<div class="layui-form-item">'+
+                        '<div class="layui-input-block">'+
+                            '<div class="layui-btn" lay-submit="" lay-filter="" id="panel-submit">提交</div>'+
+                        '</div>'+
+                    '</div>'+
+                '</form>'+
+            '</div>';
+            $('#add-btn').on('click', function () {
+                layer.open({
+                    type: 1,
+                    title: false,
+                    closeBtn: 1,
+                    shadeClose: true,
+                    skin: 'yourclass',
+                    content: panelHTML
+                });
+                $('#panel-submit').on('click',function(){
+                    
+                })
+            })
+        }
              
          
         

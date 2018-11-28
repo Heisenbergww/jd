@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=gbk">
+  <title>Video Test 10: RTSP Streaming</title>
+  <link rel="stylesheet" href="../../src/modules/video.js/video-js.css">
+  
+</head>
+
+<body>
+      <video
+      id="my-player"
+      class="video-js"
+      controls
+      preload="auto"
+      poster
+      data-setup='{}'>
+      <source src='rtmp://202.69.69.180:443/webcast/bshdlive-pc' type='rtmp/flv'></source>
+      
+      <source src='rtmp://58.200.131.2:1935/livetv/hunantv' type='rtmp/flv'></source>
+    <!-- <source src="//vjs.zencdn.net/v/oceans.mp4" type="video/mp4"></source> -->
+ 
+  </video>
+ <script src="../../src/modules/video.js/video.min.js"></script>
+ <script>
+ var options = {};
+
+var player = videojs('my-player', options, function onPlayerReady() {
+  videojs.log('Your player is ready!');
+
+  // In this context, `this` is the player that was created by Video.js.
+  this.play();
+
+  // How about an event listener?
+  this.on('ended', function() {
+    videojs.log('Awww...over so soon?!');
+  });
+});
+ </script>
+
+</body></html>

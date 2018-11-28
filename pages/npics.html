@@ -37,20 +37,20 @@
     <div id="content">
         <div class="nav-bar-left  fl">
             <ul class="layui-nav layui-nav-tree layui-inline">
-                <li class="layui-nav-item layui-nav-itemed nav-bar-line"><a href="">基础功能区</a></li>
-                <li class="layui-nav-item"><a href="">维护</a></li>
-                <li class="layui-nav-item"><a href="">实况</a></li>
-                <li class="layui-nav-item nav-bar-line"><a href="">关注对象区</a></li>
-                <li class="layui-nav-item global-selected"><a href="">人员</a></li>
-                <li class="layui-nav-item"><a href="">车辆</a></li>
-                <li class="layui-nav-item"><a href="">物品</a></li>
-                <li class="layui-nav-item"><a href="">关键区域</a></li>
-                <li class="layui-nav-item nav-bar-line"><a href="">管理员</a></li>
-                <li class="layui-nav-item"><a href="">N库管理</a></li>
-                <li class="layui-nav-item"><a href="">陌生人库管理</a></li>
-                <li class="layui-nav-item"><a href="">营区管理</a></li>
-                <li class="layui-nav-item"><a href="">营区设备管理</a></li>
-                <li class="layui-nav-item"><a href="">图库日志</a></li>
+                <li class="layui-nav-item layui-nav-itemed nav-bar-line"><a href="#">基础功能区</a></li>
+                <li class="layui-nav-item"><a href="#">维护</a></li>
+                <li class="layui-nav-item"><a href="#">实况</a></li>
+                <li class="layui-nav-item nav-bar-line"><a href="#">关注对象区</a></li>
+                <li class="layui-nav-item global-selected"><a href="../pages/index.html">人员</a></li>
+                <li class="layui-nav-item"><a href="#">车辆</a></li>
+                <li class="layui-nav-item"><a href="#">物品</a></li>
+                <li class="layui-nav-item"><a href="#">关键区域</a></li>
+                <li class="layui-nav-item nav-bar-line"><a href="#">管理员</a></li>
+                <li class="layui-nav-item"><a href="../pages/npics.html">N库管理</a></li>
+                <li class="layui-nav-item"><a href="../pages/spics.html">陌生人库管理</a></li>
+                <li class="layui-nav-item"><a href="../pages/campsmanage.html">营区管理</a></li>
+                <li class="layui-nav-item"><a href="../pages/devicesmanage.html">营区设备管理</a></li>
+                <li class="layui-nav-item"><a href="../pages/log.html">图库日志</a></li>
             </ul>
         </div>
 
@@ -59,22 +59,28 @@
             <div class="content-head">
                 <div class="content-menu">
                     <ul class="layui-nav layui-bg-white">
-                        <li class="layui-nav-item"><h2 class="admin-table-title">N库管理</h2></li>
+                        <li class="layui-nav-item">
+                            <h2 class="admin-table-title">N库管理</h2>
+                        </li>
                     </ul>
                 </div>
             </div>
 
             <!-- content main -->
-            <div class="content-main clearfix">   
+            <div class="content-main clearfix">
                 <!-- 个性部分 -->
                 <div class="content-show-part fl clearfix">
+                    <!-- 添加按钮 -->
+                    <div class=" clearfix">
+                        <button id="add-btn" class="layui-btn layui-btn-normal layui-btn-sm fr">添加图库</button>
+                    </div>
                     <!-- 表格 -->
                     <table id="npics-chart" lay-filter="npics-chart"></table>
-                    <div id="npics-chart-page"></div>                    
+                    <div id="npics-chart-page"></div>
                 </div>
             </div>
         </div>
-        
+
 
 
     </div>
@@ -83,6 +89,34 @@
     <div id="footer">
 
     </div>
+
+    <!-- <div class="panel-wrapper" id="hide-panel">
+        <form class="layui-form">
+            <div class="layui-form-item">
+                <label class="layui-form-label">图像链接</label>
+                <div class="layui-input-block">
+                    <input type="text" name="url" lay-verify="url" autocomplete="off" placeholder="请输入图片链接" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">姓名</label>
+                <div class="layui-input-block">
+                    <input type="text" name="name" lay-verify="name" autocomplete="off" placeholder="请输入姓名" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <label class="layui-form-label">ID</label>
+                <div class="layui-input-block">
+                    <input type="text" name="id" lay-verify="id" autocomplete="off" placeholder="请输入ID" class="layui-input">
+                </div>
+            </div>
+            <div class="layui-form-item">
+                <div class="layui-input-block">
+                    <div class="layui-btn" lay-submit="" lay-filter="demo1">立即提交</div>
+                </div>
+            </div>
+        </form>
+    </div> -->
 
     <script type="text/html" id="barDemo">
         <!-- <a class="layui-btn layui-btn-xs" lay-event="edit">保存</a> -->

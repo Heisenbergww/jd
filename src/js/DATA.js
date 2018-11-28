@@ -60,7 +60,7 @@ var DEVICES = [
         'campcode':12434343,
         'basecode':'基地a',
         'zonecode':'战区A',
-        'url':'<a href="rtsp://" class="flow-link">rtsp://</a>'
+        'url':'<a href="rtsp://184.72.239.149/vod/mp4:BigBuckBunny_115k.mov" class="flow-link">rtsp://184.72.239.149/vod/mp4:BigBuckBunny_115k.mov</a>'
     }
 ]
 
