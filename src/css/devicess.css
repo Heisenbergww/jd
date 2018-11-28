@@ -13,3 +13,18 @@
     left:270px;
     /* top:0; */
 }
+#pie-chart-wrapper{
+    width: 200px;
+}
+#line-chart-wrapper2{
+    position: absolute;
+    top:300px;
+    left: 0;
+    width: 470px;
+}
+#line-chart-wrapper2 h2{
+    font-size: 16px;
+    text-align: center;
+    text-indent: 15px;
+    color:#a2a2a2;
+}

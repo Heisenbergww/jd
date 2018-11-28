@@ -1,0 +1,12 @@
+#ppt2{
+    position: absolute;
+    width: 600px;
+    top:300px;
+    left: 15px;
+}
+#ppt2 h2{
+    font-size: 16px;
+    text-align: center;
+    text-indent: 15px;
+    color:#a2a2a2;
+}

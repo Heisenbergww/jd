@@ -1,10 +1,6 @@
 $(document).ready(function(){
     init();
     function init(){
-        //显示饼状图
-        showPieChart()
-        //显示折线图
-        showLineChart()
         //显示轮播
         showPpt();
         //显示战区导航

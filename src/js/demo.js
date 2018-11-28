@@ -10,7 +10,7 @@ $(document).ready(function(){
         //显示战区导航
         // $(".tree").treemenu({delay:300}).openActive();
         //区域选择
-        choseArea();
+        // choseArea();
         //映射区域列表        
         showArList();
 
@@ -110,8 +110,9 @@ $(document).ready(function(){
     }
     //区域选择
     function choseArea(){
-        $(".area-list li").on('click',function(){
-            
+        $("#ar-list li").on('click',function(){
+            console.log('hah')
+            $(this).addClass('global-selected')
         })
     }
 
@@ -125,11 +126,15 @@ $(document).ready(function(){
         var deviceList = new Vue({
             el:'#ar-list',
             data:{
-                els:aList
+                els:aList,
             },
             methods:{
-                reRander:function(e){
-                    console.log(e)
+                reRander:function(item){ 
+                    if($('#ar-list li').hasClass('global-selected')){
+                        $('#ar-list li').removeClass('global-selected')
+                    }
+                    var m = '#'+item
+                    $(m).addClass('global-selected')
                 }
             }
         })
