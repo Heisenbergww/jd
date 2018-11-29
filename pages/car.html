@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>车辆出入</title>
+    <link rel="stylesheet" href="../src/modules/layui/css/layui.css">
+    <link rel="stylesheet" href="../src/modules/swiper/css/swiper.min.css">    
+    <link rel="stylesheet" href="../src/modules/bootstrap/css/bootstrap.min.css" />
+
+    <link rel="stylesheet" href="../src/css/normal.css">    
+    <link rel="stylesheet" href="../src/css/treenenu.css">
+    <link rel="stylesheet" href="../src/css/main.css">
+    <link rel="stylesheet" href="../src/css/demo.css">
+    <link rel="stylesheet" href="../src/css/car.css">
+
+    <!-- 通用 -->
+    <script src="../src/modules/jquery/jquery-3.3.1.min.js"></script>
+    <!-- 图表 -->
+    <script src="../src/js/chart.js"></script>
+    <!-- layui -->
+    <script src="../src/modules/layui/layui.js"></script>
+    <!-- Swiper JS -->
+    <script src="../src/modules/swiper/js/swiper.js"></script>
+    <script src='../src/modules/vue/vue.js'></script>
+
+</head>
+
+<body>
+    <!-- header -->
+    <div id="header">
+        <div class="head-bar layui-nav">
+            <h2>营区视频安防与智能识别调度中心</h2>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div id="content">
+        <div class="nav-bar-left fl">
+            <ul class="layui-nav layui-nav-tree layui-inline">
+                <li class="nav-bar-line">基础功能区</li>
+                <li class="layui-nav-item"><a href="../pages/devicestate.html">维护</a></li>
+                <li class="layui-nav-item"><a href="../pages/video.html">实况</a></li>
+                <li class="nav-bar-line">关注对象区</li>
+                <li class="layui-nav-item"><a href="../pages/index.html">人员</a></li>
+                <li class="layui-nav-item nav-selected"><a href="../pages/car.html">车辆</a></li>
+                <li class="layui-nav-item"><a href="../pages/things.html">物品</a></li>
+                <li class="layui-nav-item"><a href="../pages/keyarea.html">关键区域</a></li>
+                <li class="nav-bar-line">管理员</li>
+                <li class="layui-nav-item"><a href="../pages/npics.html">N库管理</a></li>
+                <li class="layui-nav-item"><a href="../pages/spics.html">陌生人库管理</a></li>
+                <li class="layui-nav-item"><a href="../pages/campsmanage.html">营区管理</a></li>
+                <li class="layui-nav-item"><a href="../pages/devicesmanage.html">营区设备管理</a></li>
+                <li class="layui-nav-item"><a href="../pages/log.html">图库日志</a></li>
+            </ul>
+        </div>
+
+        <div class="content-body-right fl">
+            <!-- content head bar -->
+            <div class="content-head">
+                <div class="content-menu">
+                    <ul class="layui-nav layui-bg-white">
+                        <!-- <li class="layui-nav-item"><a>关联功能区</a></li> -->
+                        <li class="layui-nav-item"><a><button class="layui-btn layui-btn-normal layui-btn-radius global-selected">识别</button></a></li>
+                        <li class="layui-nav-item"><a><button class="layui-btn layui-btn-normal layui-btn-radius">服饰</button></a></li>
+                        <li class="layui-nav-item"><a><button class="layui-btn layui-btn-normal layui-btn-radius">定位</button></a></li>
+                        <li class="layui-nav-item"><a><button class="layui-btn layui-btn-normal layui-btn-radius">动作</button></a></li>
+                        <li class="layui-nav-item"><a><button class="layui-btn layui-btn-normal layui-btn-radius">跟踪</button></a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- content main -->
+            <div class="content-main clearfix">
+                <div class="content-nav-top fl">
+                    <!-- <h2 class="cnt-h2">三级树形</h2> -->
+                    <div class="tree">
+                        <ul>
+                            <li>
+                                <span><i class="icon-flag"></i>战区A</span>
+                                <ul>
+                                    <li>
+                                        <span class="badge badge-success"><i class="icon-minus-sign"></i>基地a</span>
+                                        <ul>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区a</span></a>
+                                            </li>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区b</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="badge badge-success"><i class="icon-minus-sign"></i>基地b</span>
+                                        <ul>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区b</span></a>
+                                            </li>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区b</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span><i class="icon-flag"></i>战区B</span>
+                                <ul>
+                                    <li>
+                                        <span class="badge badge-success"><i class="icon-minus-sign"></i>基地a</span>
+                                        <ul>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区b</span></a>
+                                            </li>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区b</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <span class="badge badge-success"><i class="icon-minus-sign"></i>基地b</span>
+                                        <ul>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区b</span></a>
+                                            </li>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区b</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li>
+                                <span><i class="icon-flag"></i>战区C</span>
+                                <ul>
+                                    <li>
+                                        <span class="badge badge-success"><i class="icon-minus-sign"></i>基地a</span>
+                                        <ul>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区b</span></a>
+                                            </li>
+                                            <li>
+                                                <a><span class='tree-leaf'><i class="icon-leaf"></i> 营区b</span></a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+                <div class="content-nav-bottom fl">
+                    <!-- <h2>关联列表</h2> -->
+                    <div id="ar-list">
+                        <ul>
+                            <arlist-com
+                                v-for="(el, index) in els"
+                                :key="index"
+                                :id="el.id"
+                                :content="el.text"   
+                                @click.native="reRander(el.id)"                                
+                            ></arelist-com>
+                        </ul>                       
+                    </div>
+                </div>
+
+                <div class="content-show-part fl clearfix">
+                    <div class="show-top">
+                        <!-- chart -->
+                        <div id="net-chart-wrapper">
+                            <h2>组织结果拓扑图</h2>
+                            <div class="tp">
+                                <img src="../src/img/tp.png" alt="">
+                                <span class="tp-text1">战区A</span>
+                                <span class="tp-text2">基地b</span>
+                                <span class="tp-text3">营区1</span>
+                                <span class="tp-text4">设备0006</span>
+                            </div>
+                            <!-- <canvas id="pie-chart"></canvas> -->
+                        </div>
+
+
+                        <div id="pie-chart-wrapper">
+                            <h2>车辆进出统计</h2>
+                            <canvas id="pie-chart"></canvas>
+                        </div>
+
+                        <div id="ppt3">
+                            <h2>出入车辆显示</h2>
+                            <div class="swiper-container">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">132132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:12:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">232132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:14:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">432132</div><div class="car-time"><span class="c-out">离开</span>2018-11-20 08:15:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">532132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:16:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">732132</div><div class="car-time"><span class="c-out">离开</span>2018-11-20 08:17:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">832132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:18:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">932132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:19:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">103232</div><div class="car-time"><span class="c-out">离开</span>2018-11-20 08:20:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">032132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:12:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">555555</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:12:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">132132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:12:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">232132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:14:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">432132</div><div class="car-time"><span class="c-out">离开</span>2018-11-20 08:15:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">532132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:16:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">732132</div><div class="car-time"><span class="c-out">离开</span>2018-11-20 08:17:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">832132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:18:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">932132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:19:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">103232</div><div class="car-time"><span class="c-out">离开</span>2018-11-20 08:20:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">032132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:12:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">555555</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:12:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">132132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:12:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">232132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:14:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">432132</div><div class="car-time"><span class="c-out">离开</span>2018-11-20 08:15:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">532132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:16:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">732132</div><div class="car-time"><span class="c-out">离开</span>2018-11-20 08:17:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">832132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:18:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">932132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:19:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">103232</div><div class="car-time"><span class="c-out">离开</span>2018-11-20 08:20:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">032132</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:12:34</div></div></div>
+                                    <div class="swiper-slide"><div class="car-list"><div class="car-code">555555</div><div class="car-time"><span class="c-in">进入</span>2018-11-20 08:12:34</div></div></div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <!-- <div class="swiper-pagination"></div> -->
+                                <!-- Add Arrows -->
+                                <!-- <div class="swiper-button-next"></div> -->
+                                <!-- <div class="swiper-button-prev"></div> -->
+                            </div>                        
+                        </div>
+                    </div>                    
+                    
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <!-- footer -->
+    <div id="footer">
+
+    </div>
+
+    <script src="../src/js/DATA.js"></script>
+    <script src="../src/js/main.js"></script>
+    <script src="../src/js/car.js"></script>
+
+</body>
+
+</html>
